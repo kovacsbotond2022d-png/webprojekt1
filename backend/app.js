@@ -16,6 +16,7 @@ import cors from 'cors';
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
 import termekRouter from './routes/termekek.js'
+import rendelesRouter from './routes/rendelesek.js';
 var app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -32,5 +33,6 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/termekek', termekRouter);
+app.use('/rendelesek', rendelesRouter);
 
 export default app
